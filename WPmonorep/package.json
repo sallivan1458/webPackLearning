@@ -1,0 +1,14 @@
+{
+  "name": "monorep",
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*",
+    "servises/*"
+  ],
+  "scripts": {
+    "start": "concurrently \"cd servises/admin  && npm start\"  concurrently \"cd servises/shop  && npm start\"  concurrently \"cd servises/host  && npm start\" "
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
